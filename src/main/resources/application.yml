@@ -1,0 +1,11 @@
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://177.70.27.122:3306/lethani?noAccessToProcedureBodies=true&useSSL=false
+    username: tomiatti
+    password: 4@11linux
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
