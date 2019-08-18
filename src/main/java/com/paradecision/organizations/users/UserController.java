@@ -1,10 +1,11 @@
 package com.paradecision.organizations.users;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -30,9 +31,10 @@ public class UserController {
         return repository.save(newUser);
     }
 
-    @GetMapping("/{id}")
-    Optional<User> one(@PathVariable Long id) {
-        return repository.findById(id);
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping("/{userName}")
+    User one(@PathVariable String userName) {
+        return repository.findUserByUserName(userName);
     }
 
     @PutMapping("/{id}")
@@ -49,8 +51,13 @@ public class UserController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/login")
-    User login(@RequestParam String userName, @RequestParam String password) {
-        return repository.findUserByUserNameAndPassword(userName, password);
+    ResponseEntity login(@RequestBody User user) {
+        User existingUser = repository.findUserByUserNameAndPassword(user.getUserName(), user.getPassword());
+        if (repository.existsById(existingUser.getId())) {
+            return ResponseEntity.ok(existingUser);
+        }
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
 

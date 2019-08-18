@@ -9,3 +9,21 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+
+
+security:
+  signing-key: MaYzkSjmkzPC57L
+  encoding-strength: 256
+  security-realm: Spring Boot JWT Example Realm
+
+  jwt:
+    client-id: paradecisionclientid
+    client-secret: XY7kmzoNzl100
+    grant-type: password
+    scope-read: read
+    scope-write: write
+    resource-ids: paradecisionresouceid
+
+  oauth2:
+    resource:
+      filter-order: 3
