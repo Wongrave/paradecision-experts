@@ -58,7 +58,13 @@ public class User {
     @Column(name = "a02_paradecision")
     private boolean paradecision;
 
+    @NotNull
+    @Column(name = "a02_authority")
+    private String authority;
+
     @ManyToMany(mappedBy = "users")
     private List<Department> departments;
 
+    public <T> User(String userName, String password, List<T> asList) {
+    }
 }
