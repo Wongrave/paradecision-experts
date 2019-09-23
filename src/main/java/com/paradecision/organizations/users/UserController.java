@@ -54,12 +54,12 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/login")
     ResponseEntity login(@RequestBody User user) {
-        User existingUser = repository.findUserByUserNameAndPassword(user.getUserName(), user.getPassword());
+        User existingUser = repository.findUserByUserNameAndPassword(user.getUsername(), user.getPassword());
         if (repository.existsById(existingUser.getId())) {
             return ResponseEntity.ok(existingUser);
         }
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
     }
 
 

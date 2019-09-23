@@ -1,5 +1,6 @@
 package com.paradecision.propositions;
 
+import com.paradecision.organizations.users.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 public class PropositionController {
 
     private final PropositionRepository repository;
+    private final UserRepository userRepository;
 
     @GetMapping("/all")
     List<Proposition> allPropositions() {
@@ -21,6 +23,12 @@ public class PropositionController {
     @GetMapping("/from/{organizationId}")
     List<Proposition> propositions(@PathVariable Long organizationId) {
         return repository.findAllByOrganizationId(organizationId);
+    }
+
+    @GetMapping("/fromUser/{username}")
+    List<Proposition> propositionsFromUser(@PathVariable String username) {
+        Long userId = userRepository.findUserByUserName(username).getId();
+        return repository.findAllByUserId(userId);
     }
 
     @PostMapping("/new")

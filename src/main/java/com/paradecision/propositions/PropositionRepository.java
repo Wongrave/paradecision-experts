@@ -7,5 +7,6 @@ import java.util.List;
 public interface PropositionRepository extends JpaRepository<Proposition, Long> {
 
     List<Proposition> findAllByOrganizationId(Long organizationId);
+    List<Proposition> findAllByUserId(Long userId);
 
 }

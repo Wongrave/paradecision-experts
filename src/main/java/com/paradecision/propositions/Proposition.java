@@ -33,15 +33,12 @@ public class Proposition {
     @Column(name = "a01_description")
     private String description;
 
-    @NotNull
     @Column(name = "a14_description")
     private String analysisDescription;
 
-    @NotNull
     @Column(name = "a14_confidence")
     private BigDecimal analysisConfidence;
 
-    @NotNull
     @Column(name = "a14_contradiction")
     private BigDecimal analysisContradiction;
 
