@@ -16,7 +16,7 @@ class AuthenticationDto {
 	private Long targetId;
 
 	public AuthenticationDto(User user, String jwtToken, Long targetId) {
-		this(user.getName(), user.getRoles(), jwtToken, targetId);
+		this(user.getUsername(), user.getRoles(), jwtToken, targetId);
 	}
 
 }

@@ -24,7 +24,7 @@ public class JwtTokenManager {
         final Date now = new Date();
         final Date expiration = new Date(now.getTime() + this.expirationInMillis);
         return Jwts.builder()
-                .setIssuer("Caelum Eats")
+                .setIssuer("ParaDecision Experts")
                 .setSubject(Long.toString(user.getId()))
                 .claim("roles", user.getRoles())
                 .claim("username", user.getUsername())

@@ -32,7 +32,7 @@ public class User implements UserDetails {
     private String name;
 
     @Column(name = "a02_username")
-    private String userName;
+    private String username;
 
     @NotNull
     @Column(name = "a02_password")
@@ -47,16 +47,6 @@ public class User implements UserDetails {
     @Column(name = "a02_role")
     private String role;
 
-    @Column(name = "a02_admin")
-    private boolean admin;
-
-    @Column(name = "a02_master")
-    private boolean master;
-
-    @Column(name = "a02_paradecision")
-    private boolean paradecision;
-
-
     @ManyToMany(fetch = FetchType.EAGER)
     @JsonIgnore
     private List<Role> authorities = new ArrayList<>();
@@ -64,11 +54,11 @@ public class User implements UserDetails {
     @ManyToMany(mappedBy = "users")
     private List<Department> departments;
 
-    public <T> User(String userName, String password, List<T> asList) {
+    public <T> User(String username, String password, List<T> asList) {
     }
 
     public User(String username, String password) {
-        this.userName = username;
+        this.username = username;
         this.password = password;
     }
 
@@ -79,7 +69,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Override

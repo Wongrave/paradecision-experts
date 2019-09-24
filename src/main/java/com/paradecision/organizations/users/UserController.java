@@ -36,7 +36,7 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{userName}")
     User one(@PathVariable String userName) {
-        return repository.findUserByUserName(userName);
+        return repository.findUserByUsername(userName);
     }
 
     @PutMapping("/{id}")
@@ -54,7 +54,7 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/login")
     ResponseEntity login(@RequestBody User user) {
-        User existingUser = repository.findUserByUserNameAndPassword(user.getUsername(), user.getPassword());
+        User existingUser = repository.findUserByUsernameAndPassword(user.getUsername(), user.getPassword());
         if (repository.existsById(existingUser.getId())) {
             return ResponseEntity.ok(existingUser);
         }

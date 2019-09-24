@@ -45,8 +45,8 @@ class AuthenticationController {
 	}
 	
 	@PostMapping("/admin")
-	public Long register(@RequestBody UserInfoDto userInfo) {
-		User user = userInfo.toUser();
+	public Long register(@RequestBody User user) {
+
 		user.addRole(Role.ROLES.ADMIN);
 		User salvo = userService.save(user);
 		return salvo.getId();
