@@ -25,9 +25,8 @@ public class PropositionController {
         return repository.findAllByOrganizationId(organizationId);
     }
 
-    @GetMapping("/fromUser/{username}")
-    Optional<List<Proposition>> propositionsFromUser(@PathVariable String username) {
-        Long userId = userRepository.findUserByUsername(username).getId();
+    @GetMapping("/fromUser/{userId}")
+    Optional<List<Proposition>> propositionsFromUser(@PathVariable Long userId) {
         return repository.findAllByUserId(userId);
     }
 

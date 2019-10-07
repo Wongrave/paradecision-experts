@@ -1,5 +1,6 @@
 package com.paradecision.organizations;
 
+import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.organizations.units.BusinessUnit;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,10 +24,12 @@ public class Organization {
 
     @NotNull
     @Column(name = "a20_description")
+    @Convert(converter = StringCryptoConverter.class)
     private String description;
 
     @NotNull
     @Column(name = "a20_summary")
+    @Convert(converter = StringCryptoConverter.class)
     private String summary;
 
     @NotNull

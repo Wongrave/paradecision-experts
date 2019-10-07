@@ -1,6 +1,7 @@
 package com.paradecision.organizations.departments;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.organizations.units.BusinessUnit;
 import com.paradecision.organizations.users.User;
 import lombok.AllArgsConstructor;
@@ -25,10 +26,12 @@ public class Department {
 
     @NotNull
     @Column(name = "a21_description")
+    @Convert(converter = StringCryptoConverter.class)
     private String description;
 
     @NotNull
     @Column(name = "a21_summary")
+    @Convert(converter = StringCryptoConverter.class)
     private String summary;
 
     @NotNull
@@ -37,12 +40,7 @@ public class Department {
     @JoinColumn(name = "a25_id")
     private BusinessUnit businessUnit;
 
-    @ManyToMany
-    @JoinTable(
-            name="department_user",
-            joinColumns = @JoinColumn(name = "a21_id"),
-            inverseJoinColumns = @JoinColumn(name = "a02_id")
-    )
+    @ManyToMany(mappedBy = "departments")
     private List<User> users;
 
 }

@@ -48,9 +48,10 @@ public class OrganizationController {
         return repository.save(organization);
     }
 
-    @GetMapping("/fromUser/{username}")
-    List<Organization> fromUser(@PathVariable String username) {
-        return repository.findAllByUser(username);
+    @GetMapping("/fromUser/{userId}")
+    List<Organization> fromUser(@PathVariable Long userId) {
+
+        return repository.findAllByUser(userId);
     }
 
 }

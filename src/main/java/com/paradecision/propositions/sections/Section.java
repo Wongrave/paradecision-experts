@@ -1,6 +1,7 @@
 package com.paradecision.propositions.sections;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.propositions.factors.Factor;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,14 +24,17 @@ public class Section {
 
     @NotNull
     @Column(name = "a06_tag")
+    @Convert(converter = StringCryptoConverter.class)
     private String tag;
 
     @NotNull
     @Column(name = "a06_description")
+    @Convert(converter = StringCryptoConverter.class)
     private String description;
 
     @NotNull
     @Column(name = "a06_summary")
+    @Convert(converter = StringCryptoConverter.class)
     private String summary;
 
     @NotNull

@@ -1,8 +1,8 @@
 package com.paradecision.organizations.users;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.organizations.departments.Department;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,30 +30,39 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(name = "a02_name")
+    @Convert(converter = StringCryptoConverter.class)
     private String name;
 
     @Column(name = "a02_username")
+    @Convert(converter = StringCryptoConverter.class)
     private String username;
 
     @NotNull
     @Column(name = "a02_password")
+    @Convert(converter = StringCryptoConverter.class)
     private String password;
 
     @Column(name = "a02_email")
+    @Convert(converter = StringCryptoConverter.class)
     private String email;
 
     @Column(name = "a02_enabled")
     private boolean enabled;
 
     @Column(name = "a02_role")
+    @Convert(converter = StringCryptoConverter.class)
     private String role;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JsonIgnore
     private List<Role> authorities = new ArrayList<>();
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToMany(mappedBy = "users")
+    @ManyToMany
+    @JoinTable(
+            name="user_department",
+            joinColumns = @JoinColumn(name = "a02_id"),
+            inverseJoinColumns = @JoinColumn(name = "a21_id")
+    )
     private List<Department> departments;
 
     public <T> User(String username, String password, List<T> asList) {

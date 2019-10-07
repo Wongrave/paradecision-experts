@@ -1,6 +1,7 @@
 package com.paradecision.organizations.units;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.organizations.Organization;
 import com.paradecision.organizations.departments.Department;
 import lombok.AllArgsConstructor;
@@ -8,7 +9,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -27,14 +27,17 @@ public class BusinessUnit {
 
     @NotNull
     @Column(name = "a25_description")
+    @Convert(converter = StringCryptoConverter.class)
     private String description;
 
     @NotNull
     @Column(name = "a25_summary")
+    @Convert(converter = StringCryptoConverter.class)
     private String summary;
 
     @NotNull
     @Column(name = "a25_local")
+    @Convert(converter = StringCryptoConverter.class)
     private String local;
 
     @ManyToOne

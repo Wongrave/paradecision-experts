@@ -1,5 +1,6 @@
 package com.paradecision.propositions;
 
+import com.paradecision.config.StringCryptoConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,6 +32,7 @@ public class Proposition {
 
     @NotNull
     @Column(name = "a01_description")
+    @Convert(converter = StringCryptoConverter.class)
     private String description;
 
     @Column(name = "a14_description")
@@ -44,6 +46,7 @@ public class Proposition {
 
     @NotNull
     @Column(name = "a01_summary")
+    @Convert(converter = StringCryptoConverter.class)
     private String summary;
 
     @NotNull
@@ -51,6 +54,7 @@ public class Proposition {
     private Date date;
 
     @Column(name = "a01_collection")
+    @Convert(converter = StringCryptoConverter.class)
     private String collection;
 
 }

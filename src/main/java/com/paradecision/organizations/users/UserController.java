@@ -3,7 +3,6 @@ package com.paradecision.organizations.users;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +26,7 @@ public class UserController {
 //
 //    }
 
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('MASTER') or hasAuthority('PARADECISION')")
+    //@PreAuthorize("hasAuthority('ADMIN') or hasAuthority('MASTER') or hasAuthority('PARADECISION')")
     @PostMapping("/new")
     User newUser(@RequestBody User newUser) {
         return repository.save(newUser);

@@ -29,7 +29,7 @@ public class Profile {
 
     @NotNull
     @Column(name = "a11_weight")
-    private String weight;
+    private Integer weight;
 
     @NotNull
     @Column(name = "a11_admin")

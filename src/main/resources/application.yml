@@ -1,4 +1,9 @@
 
+paradecision:
+  database:
+    encryption:
+      key: HOENIRTYRMAGNISNOTRAVARFORSETISK
+
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver

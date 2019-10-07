@@ -1,5 +1,6 @@
 package com.paradecision.propositions.factors;
 
+import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.propositions.Proposition;
 import com.paradecision.propositions.sections.Section;
 import lombok.AllArgsConstructor;
@@ -24,14 +25,17 @@ public class Factor {
 
     @NotNull
     @Column(name = "a04_tag")
+    @Convert(converter = StringCryptoConverter.class)
     private String tag;
 
     @NotNull
     @Column(name = "a04_description")
+    @Convert(converter = StringCryptoConverter.class)
     private String description;
 
     @NotNull
     @Column(name = "a04_summary")
+    @Convert(converter = StringCryptoConverter.class)
     private String summary;
 
     @NotNull
