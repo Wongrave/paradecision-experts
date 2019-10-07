@@ -1,5 +1,6 @@
 package com.paradecision.organizations.departments;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paradecision.organizations.units.BusinessUnit;
 import com.paradecision.organizations.users.User;
 import lombok.AllArgsConstructor;
@@ -31,6 +32,7 @@ public class Department {
     private String summary;
 
     @NotNull
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne
     @JoinColumn(name = "a25_id")
     private BusinessUnit businessUnit;

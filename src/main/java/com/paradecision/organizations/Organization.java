@@ -31,7 +31,7 @@ public class Organization {
 
     @NotNull
     @Column(name = "a20_active")
-    private String active;
+    private boolean active;
 
     @OneToMany(mappedBy = "organization", targetEntity = BusinessUnit.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<BusinessUnit> businessUnits;

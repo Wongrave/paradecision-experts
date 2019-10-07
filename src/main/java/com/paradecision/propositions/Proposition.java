@@ -50,7 +50,6 @@ public class Proposition {
     @Column(name = "a01_date")
     private Date date;
 
-    @NotNull
     @Column(name = "a01_collection")
     private String collection;
 

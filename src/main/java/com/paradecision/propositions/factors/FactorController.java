@@ -18,7 +18,7 @@ public class FactorController {
         return repository.findAll();
     }
 
-    @GetMapping("/{propositionId}")
+    @GetMapping("/fromProposition/{propositionId}")
     List<Factor> factors(@PathVariable Long propositionId) {
         return repository.findAllByPropositionId(propositionId);
     }

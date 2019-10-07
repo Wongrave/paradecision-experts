@@ -2,6 +2,7 @@ package com.paradecision.organizations.users;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paradecision.organizations.departments.Department;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -51,6 +52,7 @@ public class User implements UserDetails {
     @JsonIgnore
     private List<Role> authorities = new ArrayList<>();
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToMany(mappedBy = "users")
     private List<Department> departments;
 

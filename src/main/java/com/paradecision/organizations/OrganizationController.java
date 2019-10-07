@@ -11,6 +11,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class OrganizationController {
 
+
     private final OrganizationRepository repository;
 
     @GetMapping("/all")
@@ -45,6 +46,11 @@ public class OrganizationController {
         organization.setId(id);
 
         return repository.save(organization);
+    }
+
+    @GetMapping("/fromUser/{username}")
+    List<Organization> fromUser(@PathVariable String username) {
+        return repository.findAllByUser(username);
     }
 
 }

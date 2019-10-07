@@ -1,5 +1,6 @@
 package com.paradecision.propositions.sections;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paradecision.propositions.factors.Factor;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -38,6 +39,7 @@ public class Section {
 
     @ManyToOne
     @JoinColumn(name = "a04_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Factor factor;
 
 

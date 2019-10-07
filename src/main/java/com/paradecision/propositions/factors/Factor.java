@@ -1,12 +1,14 @@
 package com.paradecision.propositions.factors;
 
 import com.paradecision.propositions.Proposition;
+import com.paradecision.propositions.sections.Section;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -39,4 +41,7 @@ public class Factor {
     @ManyToOne
     @JoinColumn(name = "a01_id")
     private Proposition proposition;
+
+    @OneToMany(mappedBy = "factor", targetEntity = Section.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Section> sections;
 }
