@@ -47,4 +47,10 @@ public class DepartmentController {
         return repository.save(department);
     }
 
+    @PostMapping("/delete/{id}")
+    void deleteDepartment(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
+
 }

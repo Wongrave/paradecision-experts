@@ -19,7 +19,7 @@ public class ProfileController {
     }
 
     @GetMapping("/{propositionId}")
-    List<Profile> Profiles(@PathVariable Long propositionId) {
+    List<Profile> profiles(@PathVariable Long propositionId) {
         return repository.findAllByPropositionId(propositionId);
     }
 
@@ -44,6 +44,12 @@ public class ProfileController {
 
         return repository.save(profile);
     }
+
+    @PostMapping("/delete/{id}")
+    void deleteProfile(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
 
 
 }

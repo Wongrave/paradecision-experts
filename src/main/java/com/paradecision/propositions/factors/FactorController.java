@@ -45,4 +45,10 @@ public class FactorController {
         return repository.save(factor);
     }
 
+    @PostMapping("/delete/{id}")
+    void deleteFactor(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
+
 }

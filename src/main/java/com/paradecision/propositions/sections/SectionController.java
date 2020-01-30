@@ -45,5 +45,11 @@ public class SectionController {
         return repository.save(section);
     }
 
+    @PostMapping("/delete/{id}")
+    void deleteSection(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
+
 
 }

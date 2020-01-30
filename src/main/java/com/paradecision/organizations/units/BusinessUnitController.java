@@ -41,4 +41,16 @@ public class BusinessUnitController {
         return repository.save(businessUnit);
     }
 
+    @GetMapping("/fromOrganization/{propositionId}")
+    List<BusinessUnit> businessUnits(@PathVariable Long organizationId) {
+        return repository.findAllByOrganizationId(organizationId);
+    }
+
+
+    @PostMapping("/delete/{id}")
+    void deleteBusinessUnit(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
+
 }

@@ -54,4 +54,10 @@ public class OrganizationController {
         return repository.findAllByUser(userId);
     }
 
+    @PostMapping("/delete/{id}")
+    void deleteOrganization(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
+
 }

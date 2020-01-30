@@ -52,6 +52,11 @@ public class PropositionController {
         return repository.save(proposition);
     }
 
+    @PostMapping("/delete/{id}")
+    void deleteProposition(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
+
 
 
 
