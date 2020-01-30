@@ -1,0 +1,22 @@
+
+paradecision:
+  database:
+    encryption:
+      key: HOENIRTYRMAGNISNOTRAVARFORSETISK
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://177.70.27.122:3306/lethani?noAccessToProcedureBodies=true&useSSL=false
+    username: tomiatti
+    password: 4@11linux
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+jwt:
+  secret: 90399132-7dc4-4751-8bc0-7fa129a904cc
+  expiration: 604800000
