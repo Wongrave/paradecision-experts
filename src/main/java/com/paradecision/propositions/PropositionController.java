@@ -1,6 +1,7 @@
 package com.paradecision.propositions;
 
 import com.paradecision.organizations.users.UserRepository;
+import com.paradecision.propositions.factors.FactorRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ public class PropositionController {
 
     private final PropositionRepository repository;
     private final UserRepository userRepository;
+    private final FactorRepository factorRepository;
 
     @GetMapping("/all")
     List<Proposition> allPropositions() {
@@ -54,6 +56,7 @@ public class PropositionController {
 
     @PostMapping("/delete/{id}")
     void deleteProposition(@PathVariable Long id) {
+
         repository.deleteById(id);
     }
 

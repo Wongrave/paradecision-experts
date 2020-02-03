@@ -1,5 +1,6 @@
 package com.paradecision.propositions.factors;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paradecision.config.StringCryptoConverter;
 import com.paradecision.propositions.Proposition;
 import com.paradecision.propositions.sections.Section;
@@ -44,6 +45,7 @@ public class Factor {
 
     @ManyToOne
     @JoinColumn(name = "a01_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Proposition proposition;
 
     @OneToMany(mappedBy = "factor", targetEntity = Section.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)

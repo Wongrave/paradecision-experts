@@ -41,7 +41,7 @@ public class BusinessUnitController {
         return repository.save(businessUnit);
     }
 
-    @GetMapping("/fromOrganization/{propositionId}")
+    @GetMapping("/fromOrganization/{organizationId}")
     List<BusinessUnit> businessUnits(@PathVariable Long organizationId) {
         return repository.findAllByOrganizationId(organizationId);
     }
