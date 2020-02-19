@@ -1,16 +1,16 @@
 package com.paradecision.evidences;
 
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.paradecision.propositions.factors.Factor;
 import com.paradecision.propositions.sections.Section;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 @Entity
@@ -29,6 +29,7 @@ public class Evidence {
     @Column(name = "a01_id")
     private Long propositionId;
 
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(optional = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "a04_id")
     private Factor factor;
