@@ -25,7 +25,7 @@ public class Profile {
 
     @NotNull
     @Column(name = "a02_id")
-    private String userId;
+    private Long userId;
 
     @NotNull
     @Column(name = "a11_weight")
