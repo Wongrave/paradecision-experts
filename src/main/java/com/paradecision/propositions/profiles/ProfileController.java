@@ -23,6 +23,11 @@ public class ProfileController {
         return repository.findAllByPropositionId(propositionId);
     }
 
+//    @GetMapping("/{organizationId}")
+//    List<User> fromOrganization(@PathVariable Long organizationId){
+//        return repository.findAllByPropositionId(organizationId);
+//    }
+
     @PostMapping("/new")
     Profile newProfile(@RequestBody Profile newProfile) {
         return repository.save(newProfile);
