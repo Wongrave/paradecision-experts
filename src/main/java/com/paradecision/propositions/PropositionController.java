@@ -38,7 +38,9 @@ public class PropositionController {
     @PostMapping("/new")
     Proposition newProposition(@RequestBody Proposition newProposition) {
         Proposition proposition = repository.save(newProposition);
+        String name = userRepository.getOne(proposition.getUserId()).getName();
         Profile newProfile = new Profile();
+        newProfile.setName(name);
         newProfile.setWeight(1);
         newProfile.setStatus(true);
         newProfile.setOwner(true);
