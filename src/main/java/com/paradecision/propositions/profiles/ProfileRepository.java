@@ -8,4 +8,6 @@ public interface ProfileRepository extends JpaRepository<Profile, Long> {
 
     List<Profile> findAllByPropositionId(Long propositionId);
 
+
+
 }

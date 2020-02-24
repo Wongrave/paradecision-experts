@@ -2,6 +2,8 @@ package com.paradecision.propositions;
 
 import com.paradecision.organizations.users.UserRepository;
 import com.paradecision.propositions.factors.FactorRepository;
+import com.paradecision.propositions.profiles.Profile;
+import com.paradecision.propositions.profiles.ProfileRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,7 @@ import java.util.Optional;
 public class PropositionController {
 
     private final PropositionRepository repository;
+    private final ProfileRepository profileRepository;
     private final UserRepository userRepository;
     private final FactorRepository factorRepository;
 
@@ -29,12 +32,23 @@ public class PropositionController {
 
     @GetMapping("/fromUser/{userId}")
     Optional<List<Proposition>> propositionsFromUser(@PathVariable Long userId) {
-        return repository.findAllByUserId(userId);
+        return repository.findAllByProfile(userId);
     }
 
     @PostMapping("/new")
     Proposition newProposition(@RequestBody Proposition newProposition) {
-        return repository.save(newProposition);
+        Proposition proposition = repository.save(newProposition);
+        Profile newProfile = new Profile();
+        newProfile.setWeight(1);
+        newProfile.setStatus(true);
+        newProfile.setOwner(true);
+        newProfile.setExpert(false);
+        newProfile.setAnalyst(false);
+        newProfile.setAdmin(true);
+        newProfile.setPropositionId(proposition.getId());
+        newProfile.setUserId(proposition.getUserId());
+        profileRepository.save(newProfile);
+        return proposition;
     }
 
     @GetMapping("/{id}")
@@ -54,7 +68,7 @@ public class PropositionController {
         return repository.save(proposition);
     }
 
-    @PostMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     void deleteProposition(@PathVariable Long id) {
 
         repository.deleteById(id);

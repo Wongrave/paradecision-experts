@@ -2,11 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90d75ebe-ee3c-4509-a951-6ea1821318fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/paradecision-experts.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/Evidence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/Evidence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/EvidenceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/EvidenceDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/organizations/users/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/organizations/users/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/PropositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/PropositionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/PropositionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/PropositionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/ParadecisionApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/ParadecisionApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/AbstractCryptoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/AbstractCryptoConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/AuthenticationDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/AuthenticationDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/AuthorizationTargetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/AuthorizationTargetService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/CipherInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/CipherInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/JwtTokenManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/JwtTokenManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/KeyProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/KeyProperty.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/LocalDateCryptoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/LocalDateCryptoConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/LocalDateTimeCryptoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/LocalDateTimeCryptoConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/LoginForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/LoginForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/PasswordEncoderConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/PasswordEncoderConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/StringCryptoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/StringCryptoConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/UserInfoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/UserInfoDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/config/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/config/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/Evidence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/Evidence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/Organization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/Organization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/OrganizationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/OrganizationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/OrganizationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/OrganizationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/departments/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/departments/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/departments/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/departments/DepartmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/departments/DepartmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/departments/DepartmentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/units/BusinessUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/units/BusinessUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/units/BusinessUnitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/units/BusinessUnitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/units/BusinessUnitRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/units/BusinessUnitRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/Role$ROLES.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/Role$ROLES.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/organizations/users/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/PropositionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/PropositionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/PropositionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/PropositionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/factors/Factor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/factors/Factor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/factors/FactorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/factors/FactorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/factors/FactorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/factors/FactorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/ProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/ProfileRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/ProfileRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/sections/Section.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/sections/Section.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/sections/SectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/sections/SectionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/sections/SectionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/sections/SectionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/paradecision-experts-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/paradecision-experts-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/paradecision-experts-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/paradecision-experts-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.paradecision.ParadecisionApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.paradecision.ParadecisionApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.paradecision.ParadecisionApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.paradecision.ParadecisionApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/paradecision/ParadecisionApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/paradecision/ParadecisionApplicationTests.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,11 +115,17 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -68,6 +136,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -118,7 +189,17 @@
       <serviceView>
         <option name="contentProportion" value="0.19176598" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d85f2b84" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d85f2b84" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c7592d0c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -178,6 +259,12 @@
       <workItem from="1580752754733" duration="4248000" />
       <workItem from="1581721872957" duration="3914000" />
       <workItem from="1582557781872" duration="737000" />
+      <workItem from="1581949440799" duration="794000" />
+      <workItem from="1581950301817" duration="3366000" />
+      <workItem from="1581977340821" duration="3081000" />
+      <workItem from="1582309064689" duration="3707000" />
+      <workItem from="1582394998206" duration="1577000" />
+      <workItem from="1582402559970" duration="337000" />
     </task>
     <servers />
   </component>
@@ -196,5 +283,47 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="560" y="220" key="#Project_Structure" timestamp="1581950182681">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state x="560" y="220" key="#Project_Structure/0.36.1920.1044@0.36.1920.1044" timestamp="1581950182681" />
+    <state width="1291" height="275" key="GridCell.Tab.0.bottom" timestamp="1582402600068">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.0.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
+    <state width="1291" height="275" key="GridCell.Tab.0.center" timestamp="1582402600067">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.0.center/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600067" />
+    <state width="1291" height="275" key="GridCell.Tab.0.left" timestamp="1582402600066">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.0.left/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600066" />
+    <state width="1291" height="275" key="GridCell.Tab.0.right" timestamp="1582402600068">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.0.right/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
+    <state width="1291" height="275" key="GridCell.Tab.1.bottom" timestamp="1582402600069">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.1.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600069" />
+    <state width="1291" height="275" key="GridCell.Tab.1.center" timestamp="1582402600068">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.1.center/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
+    <state width="1291" height="275" key="GridCell.Tab.1.left" timestamp="1582402600068">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.1.left/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
+    <state width="1291" height="275" key="GridCell.Tab.1.right" timestamp="1582402600069">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1291" height="275" key="GridCell.Tab.1.right/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600069" />
+    <state x="627" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1582402582009">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state x="627" y="386" key="com.intellij.ide.util.TipDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1582402582009" />
   </component>
 </project>
