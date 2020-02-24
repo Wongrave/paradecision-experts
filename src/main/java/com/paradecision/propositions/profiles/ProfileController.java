@@ -54,31 +54,31 @@ public class ProfileController {
     }
 
     @PutMapping("/changeAdmin/{id}")
-    Profile changeAdmin(@RequestBody Boolean checked, @PathVariable Long id) {
+    Profile changeAdmin(@RequestBody Profile newProfile, @PathVariable Long id) {
 
         Profile profile = repository.getOne(id);
 
-        profile.setAdmin(checked);
+        profile.setAdmin(newProfile.isAdmin());
 
         return repository.save(profile);
     }
 
     @PutMapping("/changeExpert/{id}")
-    Profile changeExpert(@RequestBody Boolean checked, @PathVariable Long id) {
+    Profile changeExpert(@RequestBody Profile newProfile, @PathVariable Long id) {
 
         Profile profile = repository.getOne(id);
 
-        profile.setExpert(checked);
+        profile.setExpert(newProfile.isExpert());
 
         return repository.save(profile);
     }
 
     @PutMapping("/changeAnalyst/{id}")
-    Profile changeAnalyst(@RequestBody Boolean checked, @PathVariable Long id) {
+    Profile changeAnalyst(@RequestBody Profile newProfile, @PathVariable Long id) {
 
         Profile profile = repository.getOne(id);
 
-        profile.setAnalyst(checked);
+        profile.setAnalyst(newProfile.isAnalyst());
 
         return repository.save(profile);
     }
