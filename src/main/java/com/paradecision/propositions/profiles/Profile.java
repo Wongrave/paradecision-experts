@@ -1,5 +1,6 @@
 package com.paradecision.propositions.profiles;
 
+import com.paradecision.config.StringCryptoConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,6 +27,10 @@ public class Profile {
     @NotNull
     @Column(name = "a02_id")
     private Long userId;
+
+    @Column(name = "a02_name")
+    @Convert(converter = StringCryptoConverter.class)
+    private String name;
 
     @NotNull
     @Column(name = "a11_weight")
