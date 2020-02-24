@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/profiles")
@@ -40,11 +39,6 @@ public class ProfileController {
         newProfile.setStatus(true);
         newProfile.setWeight(1);
         return repository.save(newProfile);
-    }
-
-    @GetMapping("/{id}")
-    Optional<Profile> one(@PathVariable Long id) {
-        return repository.findById(id);
     }
 
     @PutMapping("/{id}")
