@@ -30,9 +30,9 @@ public class PropositionController {
         return repository.findAllByOrganizationId(organizationId);
     }
 
-    @GetMapping("/fromUser/{userId}")
-    Optional<List<Proposition>> propositionsFromUser(@PathVariable Long userId) {
-        return repository.findAllByProfile(userId);
+    @GetMapping("/fromUser/{organizationId}/{userId}")
+    Optional<List<Proposition>> propositionsFromUser(@PathVariable Long userId, @PathVariable Long organizationId) {
+        return repository.findAllByProfile(userId, organizationId);
     }
 
     @PostMapping("/new")
