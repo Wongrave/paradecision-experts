@@ -1,6 +1,8 @@
 package com.paradecision.propositions.profiles;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paradecision.config.StringCryptoConverter;
+import com.paradecision.propositions.groups.Group;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -55,5 +57,10 @@ public class Profile {
     @NotNull
     @Column(name = "a11_owner")
     private boolean owner;
+
+    @ManyToOne
+    @JoinColumn(name = "a05_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Group group;
 
 }
