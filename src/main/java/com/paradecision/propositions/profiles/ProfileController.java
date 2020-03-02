@@ -25,9 +25,9 @@ public class ProfileController {
         return repository.findAllByPropositionId(propositionId);
     }
 
-    @GetMapping("/suggestedUsers/{organizationId}")
-    List<User> suggestedUsers(@PathVariable Long organizationId){
-        return userRepository.findAllUsersByOrganizationId(organizationId);
+    @GetMapping("/suggestedUsers/{propositionId}")
+    List<User> suggestedUsers(@PathVariable Long propositionId){
+        return userRepository.findAllUsersByPropositionId(propositionId);
     }
 
     @PostMapping("/new")
