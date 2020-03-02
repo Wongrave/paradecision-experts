@@ -83,7 +83,7 @@ public class ProfileController {
         return repository.save(profile);
     }
 
-    @PostMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     void deleteProfile(@PathVariable Long id) {
         repository.deleteById(id);
     }
