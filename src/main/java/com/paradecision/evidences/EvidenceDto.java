@@ -11,10 +11,10 @@ public class EvidenceDto {
 
     private Long id;
     private BigDecimal favorable;
-    private BigDecimal desfavorable;
+    private BigDecimal unfavorable;
 
     public EvidenceDto(Evidence ev) {
-        this(ev.getId(), ev.getFavorable(), ev.getDesfavorable());
+        this(ev.getId(), ev.getFavorable(), ev.getUnfavorable());
     }
 
 }

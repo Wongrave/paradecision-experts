@@ -58,7 +58,7 @@ public class Evidence {
     @NotNull
     @Positive
     @Column(name = "a07_lambda")
-    private BigDecimal desfavorable;
+    private BigDecimal unfavorable;
 
     @NotNull
     @Column(name = "a07_weight")

@@ -1,10 +1,11 @@
 package com.paradecision.propositions.profiles;
 
+import com.paradecision.organizations.users.User;
+import com.paradecision.organizations.users.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/profiles")
@@ -12,6 +13,7 @@ import java.util.Optional;
 public class ProfileController {
 
     private final ProfileRepository repository;
+    private final UserRepository userRepository;
 
     @GetMapping("/all")
     List<Profile> allProfile() {
@@ -23,14 +25,20 @@ public class ProfileController {
         return repository.findAllByPropositionId(propositionId);
     }
 
-    @PostMapping("/new")
-    Profile newProfile(@RequestBody Profile newProfile) {
-        return repository.save(newProfile);
+    @GetMapping("/suggestedUsers/{organizationId}")
+    List<User> suggestedUsers(@PathVariable Long organizationId){
+        return userRepository.findAllUsersByOrganizationId(organizationId);
     }
 
-    @GetMapping("/{id}")
-    Optional<Profile> one(@PathVariable Long id) {
-        return repository.findById(id);
+    @PostMapping("/new")
+    Profile newProfile(@RequestBody Profile newProfile) {
+        newProfile.setAdmin(false);
+        newProfile.setAnalyst(false);
+        newProfile.setExpert(false);
+        newProfile.setOwner(false);
+        newProfile.setStatus(true);
+        newProfile.setWeight(1);
+        return repository.save(newProfile);
     }
 
     @PutMapping("/{id}")
@@ -41,6 +49,36 @@ public class ProfileController {
         //  return ResponseEntity.notFound().build();
 
         profile.setId(id);
+
+        return repository.save(profile);
+    }
+
+    @PutMapping("/changeAdmin/{id}")
+    Profile changeAdmin(@RequestBody Profile newProfile, @PathVariable Long id) {
+
+        Profile profile = repository.getOne(id);
+
+        profile.setAdmin(newProfile.isAdmin());
+
+        return repository.save(profile);
+    }
+
+    @PutMapping("/changeExpert/{id}")
+    Profile changeExpert(@RequestBody Profile newProfile, @PathVariable Long id) {
+
+        Profile profile = repository.getOne(id);
+
+        profile.setExpert(newProfile.isExpert());
+
+        return repository.save(profile);
+    }
+
+    @PutMapping("/changeAnalyst/{id}")
+    Profile changeAnalyst(@RequestBody Profile newProfile, @PathVariable Long id) {
+
+        Profile profile = repository.getOne(id);
+
+        profile.setAnalyst(newProfile.isAnalyst());
 
         return repository.save(profile);
     }

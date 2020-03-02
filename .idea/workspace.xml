@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90d75ebe-ee3c-4509-a951-6ea1821318fd" name="Default Changelist" comment="" />
+    <list default="true" id="90d75ebe-ee3c-4509-a951-6ea1821318fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/GroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/GroupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/Profile.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,12 +119,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -176,6 +178,8 @@
       <workItem from="1580404198316" duration="295000" />
       <workItem from="1580405752325" duration="3531000" />
       <workItem from="1580752754733" duration="4248000" />
+      <workItem from="1581721872957" duration="3914000" />
+      <workItem from="1582557781872" duration="737000" />
       <workItem from="1581949440799" duration="794000" />
       <workItem from="1581950301817" duration="3366000" />
       <workItem from="1581977340821" duration="3081000" />
