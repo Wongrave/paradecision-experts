@@ -23,7 +23,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
                     "JOIN organization_20 o ON o.a20_id = bu.a20_id " +
                     "JOIN proposition_01 p ON o.a20_id = p.a20_id " +
                     "WHERE p.a01_id = :propositionId " +
-                    "",
+                    "NOT EXISTS (SELECT u.* " +
+                        "FROM user_02 u, profile_11 pr " +
+                        "WHERE u.a02_id = pr.a02_id " +
+                        "AND pr.a01_id = :propositionId )",
             nativeQuery = true)
     List<User> findAllUsersByPropositionId(Long propositionId);
 
