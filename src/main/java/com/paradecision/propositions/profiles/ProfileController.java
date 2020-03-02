@@ -20,7 +20,7 @@ public class ProfileController {
         return repository.findAll();
     }
 
-    @GetMapping("/{propositionId}")
+    @GetMapping("/from/{propositionId}")
     List<Profile> profiles(@PathVariable Long propositionId) {
         return repository.findAllByPropositionId(propositionId);
     }
