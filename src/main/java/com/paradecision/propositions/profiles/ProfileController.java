@@ -23,14 +23,14 @@ public class ProfileController {
         return repository.findAll();
     }
 
-    @GetMapping("/{propositionId}")
+    @GetMapping("/from/{propositionId}")
     List<Profile> profiles(@PathVariable Long propositionId) {
         return repository.findAllByPropositionId(propositionId);
     }
 
-    @GetMapping("/suggestedUsers/{organizationId}")
-    List<User> suggestedUsers(@PathVariable Long organizationId){
-        return userRepository.findAllUsersByOrganizationId(organizationId);
+    @GetMapping("/suggestedUsers/{propositionId}")
+    List<User> suggestedUsers(@PathVariable Long propositionId){
+        return userRepository.findAllUsersByPropositionId(propositionId);
     }
 
     @PostMapping("/new")
@@ -96,7 +96,7 @@ public class ProfileController {
         return repository.save(profile);
     }
 
-    @PostMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     void deleteProfile(@PathVariable Long id) {
         repository.deleteById(id);
     }
