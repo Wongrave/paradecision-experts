@@ -2,6 +2,8 @@ package com.paradecision.propositions.profiles;
 
 import com.paradecision.organizations.users.User;
 import com.paradecision.organizations.users.UserRepository;
+import com.paradecision.propositions.groups.Group;
+import com.paradecision.propositions.groups.GroupRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,7 @@ public class ProfileController {
 
     private final ProfileRepository repository;
     private final UserRepository userRepository;
+    private final GroupRepository groupRepository;
 
     @GetMapping("/all")
     List<Profile> allProfile() {
@@ -79,6 +82,16 @@ public class ProfileController {
         Profile profile = repository.getOne(id);
 
         profile.setAnalyst(newProfile.isAnalyst());
+
+        return repository.save(profile);
+    }
+
+    @PutMapping("/addToGroup/{id}")
+    Profile addToGroup(@RequestBody Profile newProfile, @PathVariable Long id) {
+
+        Profile profile = repository.getOne(newProfile.getId());
+        Group group = groupRepository.getOne(id);
+        profile.setGroup(group);
 
         return repository.save(profile);
     }

@@ -1,5 +1,7 @@
 package com.paradecision.evidences;
 
+import com.paradecision.organizations.users.User;
+import com.paradecision.organizations.users.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import java.util.Optional;
 public class EvidenceController {
 
     private final EvidenceRepository repository;
+    private final UserRepository userRepository;
 
 
     @GetMapping("/all")
@@ -20,8 +23,10 @@ public class EvidenceController {
     }
 
     @GetMapping("/{login}/{proposition}")
-    List<Evidence> evidences(@PathVariable Long proposition) {
-        return repository.findByPropositionId(proposition);
+    List<Evidence> evidences(@PathVariable Long proposition, @PathVariable String login) {
+        Optional<User> user = userRepository.findByUsername(login);
+
+        return repository.returnAllEvidencesFromUser(proposition, user.get().getId());
     }
 
     @PostMapping("/new")

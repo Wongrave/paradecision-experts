@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90d75ebe-ee3c-4509-a951-6ea1821318fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/GroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/GroupRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/analysis/AnalysisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/analysis/AnalysisModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/groups/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/Evidence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/Evidence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/EvidenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/EvidenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/EvidenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/evidences/EvidenceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/paradecision-experts.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/Evidence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/Evidence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/evidences/EvidenceRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/ProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paradecision/propositions/profiles/ProfileController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,16 +99,6 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="ParadecisionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -125,24 +121,25 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.19176598" />
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d85f2b84" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d85f2b84" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a5e58b57" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -205,6 +202,9 @@
       <workItem from="1582309064689" duration="3707000" />
       <workItem from="1582394998206" duration="1577000" />
       <workItem from="1582402559970" duration="337000" />
+      <workItem from="1584395183052" duration="886000" />
+      <workItem from="1584396113470" duration="38000" />
+      <workItem from="1584396186838" duration="8904000" />
     </task>
     <servers />
   </component>
@@ -229,41 +229,54 @@
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="560" y="220" key="#Project_Structure/0.36.1920.1044@0.36.1920.1044" timestamp="1581950182681" />
-    <state width="1291" height="275" key="GridCell.Tab.0.bottom" timestamp="1582402600068">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state x="1628" y="1324" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584396125806">
+      <screen x="984" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="1628" y="1324" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584396125806" />
+    <state width="1291" height="234" key="GridCell.Tab.0.bottom" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.0.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
-    <state width="1291" height="275" key="GridCell.Tab.0.center" timestamp="1582402600067">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.0.bottom/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state width="1291" height="234" key="GridCell.Tab.0.center" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.0.center/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600067" />
-    <state width="1291" height="275" key="GridCell.Tab.0.left" timestamp="1582402600066">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.0.center/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state width="1291" height="234" key="GridCell.Tab.0.left" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.0.left/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600066" />
-    <state width="1291" height="275" key="GridCell.Tab.0.right" timestamp="1582402600068">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.0.left/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state width="1291" height="234" key="GridCell.Tab.0.right" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.0.right/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
-    <state width="1291" height="275" key="GridCell.Tab.1.bottom" timestamp="1582402600069">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.0.right/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state width="1291" height="234" key="GridCell.Tab.1.bottom" timestamp="1584652251597">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.1.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600069" />
-    <state width="1291" height="275" key="GridCell.Tab.1.center" timestamp="1582402600068">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.1.bottom/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251597" />
+    <state width="1291" height="234" key="GridCell.Tab.1.center" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.1.center/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
-    <state width="1291" height="275" key="GridCell.Tab.1.left" timestamp="1582402600068">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.1.center/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state width="1291" height="234" key="GridCell.Tab.1.left" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.1.left/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600068" />
-    <state width="1291" height="275" key="GridCell.Tab.1.right" timestamp="1582402600069">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.1.left/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state width="1291" height="234" key="GridCell.Tab.1.right" timestamp="1584652251596">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state width="1291" height="275" key="GridCell.Tab.1.right/0.36.1920.1044@0.36.1920.1044" timestamp="1582402600069" />
-    <state x="627" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1582402582009">
-      <screen x="0" y="36" width="1920" height="1044" />
+    <state width="1291" height="234" key="GridCell.Tab.1.right/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584652251596" />
+    <state x="1611" y="1442" key="com.intellij.ide.util.TipDialog" timestamp="1584396191341">
+      <screen x="984" y="1080" width="1920" height="1080" />
     </state>
     <state x="627" y="386" key="com.intellij.ide.util.TipDialog/0.36.1920.1044@0.36.1920.1044" timestamp="1582402582009" />
+    <state x="1611" y="1442" key="com.intellij.ide.util.TipDialog/984.1080.1920.1080/0.0.1920.1080@984.1080.1920.1080" timestamp="1584396191341" />
   </component>
 </project>

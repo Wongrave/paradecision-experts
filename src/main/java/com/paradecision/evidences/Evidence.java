@@ -39,10 +39,6 @@ public class Evidence {
     private Section section;
 
     @NotNull
-    @Column(name = "a15_id")
-    private Long userGroupRelationId;
-
-    @NotNull
     @Column(name = "a11_id")
     private Long profileId;
 
