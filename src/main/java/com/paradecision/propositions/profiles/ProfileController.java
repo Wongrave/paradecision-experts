@@ -1,5 +1,6 @@
 package com.paradecision.propositions.profiles;
 
+import com.paradecision.organizations.users.User;
 import com.paradecision.organizations.users.UserRepository;
 import com.paradecision.propositions.groups.Group;
 import com.paradecision.propositions.groups.GroupRepository;
@@ -28,7 +29,12 @@ public class ProfileController {
     }
 
     @GetMapping("/suggestedUsers/{propositionId}")
-    List<Profile> suggestedUsers(@PathVariable Long propositionId){
+    List<User> suggestedUsers(@PathVariable Long propositionId){
+        return userRepository.findAllUsersByPropositionId(propositionId);
+    }
+
+    @GetMapping("/suggestedProfiles/{propositionId}")
+    List<Profile> suggestedProfiles(@PathVariable Long propositionId){
         return repository.returnSuggestedProfiles(propositionId);
     }
 
