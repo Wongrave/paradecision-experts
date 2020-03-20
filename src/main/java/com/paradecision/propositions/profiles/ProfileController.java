@@ -107,6 +107,16 @@ public class ProfileController {
         return repository.save(profile);
     }
 
+    @PutMapping("/removeFromGroup/{profileId}")
+    Profile removeFromGroup(@PathVariable Long profileId) {
+
+        Profile profile = repository.getOne(profileId);
+
+        profile.setGroup(null);
+
+        return repository.save(profile);
+    }
+
     @DeleteMapping("/delete/{id}")
     void deleteProfile(@PathVariable Long id) {
         repository.deleteById(id);
