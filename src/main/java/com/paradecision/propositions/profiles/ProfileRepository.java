@@ -1,5 +1,6 @@
 package com.paradecision.propositions.profiles;
 
+import com.paradecision.propositions.groups.Group;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -8,6 +9,7 @@ import java.util.List;
 public interface ProfileRepository extends JpaRepository<Profile, Long> {
 
     List<Profile> findAllByPropositionId(Long propositionId);
+    List<Profile> findAllByGroup(Group group);
 
     @Query(
             value = "SELECT DISTINCT p.a11_id, p.a11_admin, p.a11_analyst, p.a11_expert, " +

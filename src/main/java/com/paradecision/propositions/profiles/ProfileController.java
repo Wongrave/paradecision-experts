@@ -28,6 +28,12 @@ public class ProfileController {
         return repository.findAllByPropositionId(propositionId);
     }
 
+    @GetMapping("/fromGroup/{groupId}")
+    List<Profile> profilesFromGroup(@PathVariable Long groupId) {
+        Group group = groupRepository.getOne(groupId);
+        return repository.findAllByGroup(group);
+    }
+
     @GetMapping("/suggestedUsers/{propositionId}")
     List<User> suggestedUsers(@PathVariable Long propositionId){
         return userRepository.findAllUsersByPropositionId(propositionId);

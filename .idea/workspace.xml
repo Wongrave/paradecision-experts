@@ -4,6 +4,7 @@
     <list default="true" id="90d75ebe-ee3c-4509-a951-6ea1821318fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paradecision/propositions/profiles/ProfileRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +200,7 @@
       <workItem from="1583167128650" duration="403000" />
       <workItem from="1583185276605" duration="367000" />
       <workItem from="1584652770980" duration="2972000" />
-      <workItem from="1584723893116" duration="11709000" />
+      <workItem from="1584723893116" duration="12371000" />
     </task>
     <servers />
   </component>
