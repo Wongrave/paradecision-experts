@@ -20,6 +20,7 @@ public class AnalysisController {
 
     @GetMapping("/from/{propositionId}")
     List<Evidence> analysis(@PathVariable Long propositionId) {
+
         return evidenceRepository.findByPropositionId(propositionId);
     }
 

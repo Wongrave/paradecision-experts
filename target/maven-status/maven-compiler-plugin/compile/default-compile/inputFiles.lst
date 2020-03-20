@@ -6,8 +6,9 @@
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/Proposition.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/groups/Group.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/groups/GroupRepository.java
-/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/evidences/EvidenceRepository.java
+/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/analysis/AnalysisController.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/config/AuthorizationTargetService.java
+/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/evidences/EvidenceRepository.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/factors/FactorRepository.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/config/UserService.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/config/AuthenticationDto.java
@@ -17,8 +18,8 @@
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/organizations/users/Role.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/sections/SectionRepository.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/sections/Section.java
-/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/evidences/EvidenceDto.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/config/UserInfoDto.java
+/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/evidences/EvidenceDto.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/evidences/EvidenceController.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/profiles/ProfileController.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/config/LoginForm.java
@@ -26,8 +27,8 @@
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/organizations/Organization.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/config/AbstractCryptoConverter.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/organizations/OrganizationRepository.java
-/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/organizations/departments/DepartmentRepository.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/organizations/users/UserRepository.java
+/home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/organizations/departments/DepartmentRepository.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/groups/GroupController.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/evidences/Evidence.java
 /home/kvothe/Development/paradecision-experts/src/main/java/com/paradecision/propositions/PropositionRepository.java
