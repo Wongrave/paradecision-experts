@@ -86,8 +86,8 @@ public class ProfileController {
         return repository.save(profile);
     }
 
-    @PutMapping("/addToGroup/{id}")
-    Profile addToGroup(@RequestBody Long profileId, @PathVariable Long id) {
+    @PutMapping("/addToGroup/{profileId}/{id}")
+    Profile addToGroup(@PathVariable Long profileId, @PathVariable Long id) {
 
         Profile profile = repository.getOne(profileId);
         Group group = groupRepository.getOne(id);

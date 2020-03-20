@@ -21,17 +21,20 @@ public class EvidenceController {
         return repository.findAll();
     }
 
-    @GetMapping("/{userId}/{proposition}")
-    List<Evidence> evidences(@PathVariable Long proposition, @PathVariable Long userId) {
+    @GetMapping("/{userId}/{propositionId}")
+    List<Evidence> evidences(@PathVariable Long propositionId, @PathVariable Long userId) {
 
-        repository.generateEvidences(proposition, userId);
+        repository.generateEvidences(propositionId, userId);
 
-        return repository.returnAllEvidencesFromUser(proposition, userId);
+        return repository.returnAllEvidencesFromUser(propositionId, userId);
     }
 
     @PostMapping("/new")
-    Evidence newEvidence(@RequestBody Evidence newEvidence) {
-        return repository.save(newEvidence);
+    Optional<Evidence> newEvidence(@RequestBody List<Evidence> newEvidences) {
+        for(Evidence newEvidence : newEvidences) {
+            repository.save(newEvidence);
+        }
+        return null;
     }
 
     @GetMapping("/{id}")

@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 @Entity
@@ -47,12 +46,10 @@ public class Evidence {
     private Long groupId;
 
     @NotNull
-    @Positive
     @Column(name = "a07_mi")
     private BigDecimal favorable;
 
     @NotNull
-    @Positive
     @Column(name = "a07_lambda")
     private BigDecimal unfavorable;
 
