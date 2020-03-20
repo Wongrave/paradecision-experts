@@ -13,7 +13,7 @@ public interface ProfileRepository extends JpaRepository<Profile, Long> {
             value = "SELECT DISTINCT p.a11_id, p.a11_admin, p.a11_analyst, p.a11_expert, " +
                     "p.a11_owner, p.a01_id, p.a11_status, p.a02_id, p.a11_weight, p.a02_name, p.a05_id " +
                     "FROM profile_11 p  " +
-                    "WHERE p.a01_id = 1 " +
+                    "WHERE p.a01_id = :propositionId " +
                     "AND p.a11_expert = 1 " +
                     "AND p.a05_id IS NULL ",
             nativeQuery = true)
