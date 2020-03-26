@@ -9,6 +9,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EvidencesWrapper<T> {
+public class EvidencesWrapper {
     private List<Evidence> evidences;
 }

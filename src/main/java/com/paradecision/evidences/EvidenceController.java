@@ -30,11 +30,8 @@ public class EvidenceController {
     }
 
     @PostMapping("/new")
-    Optional<Evidence> newEvidence(@RequestBody EvidencesWrapper<Evidence> newEvidences) {
-        for(Evidence newEvidence : newEvidences.getEvidences()) {
-            repository.save(newEvidence);
-        }
-        return null;
+    Evidence newEvidence(@RequestBody Evidence evidence) {
+        return repository.save(evidence);
     }
 
     @GetMapping("/{id}")

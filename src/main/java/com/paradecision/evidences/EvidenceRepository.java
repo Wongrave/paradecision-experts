@@ -12,6 +12,8 @@ import java.util.Optional;
 
 public interface EvidenceRepository extends JpaRepository<Evidence, Long> {
 
+    List<Evidence> findAllByGroupId(Long groupId);
+
     List<Evidence> findByPropositionId(Long propositionId);
 
     @Query(

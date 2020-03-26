@@ -17,7 +17,17 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Data
 @Table(name = "evidence_07")
-public class Evidence {
+public class Evidence implements Cloneable {
+
+    public Evidence(BigDecimal favorable, BigDecimal unfavorable, Factor factor){
+        this.setFavorable(favorable);
+        this.setUnfavorable(unfavorable);
+        this.setFactor(factor);
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
