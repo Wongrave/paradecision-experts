@@ -37,47 +37,46 @@ public class AnalysisController {
         List<Evidence> maxMinUnfavorable = new ArrayList<Evidence>();
         List<Group> groups = groupRepository.findAllByPropositionId(propositionId);
         List<Factor> factors = factorRepository.findAllByPropositionId(propositionId);
-        for(Group group : groups){
+        List<Evidence> miLambda = new ArrayList<Evidence>();
+        for(Group group : groups) {
             List<Evidence> evidences = evidenceRepository.findAllByGroupId(group.getId());
-            for(Factor factor : factors){
-                Evidence templateEvidenceFavorable = new Evidence(BigDecimal.valueOf(0), BigDecimal.valueOf(100), factor);
-                Evidence templateEvidenceUnfavorable = new Evidence(BigDecimal.valueOf(0), BigDecimal.valueOf(100), factor);
-                for (Evidence evidence : evidences){
-                    if ( evidence.getFactor().getId() == factor.getId() ){
-                        if (templateEvidenceFavorable.getFavorable().compareTo(evidence.getFavorable())==-1){
-                            templateEvidenceFavorable = (Evidence) evidence.clone();
+            for (Factor factor : factors) {
+                Evidence templateEvidence = new Evidence(BigDecimal.valueOf(0), BigDecimal.valueOf(100), factor);
+                for (Evidence evidence : evidences) {
+                    if (evidence.getFactor().getId() == factor.getId()) {
+                        if (templateEvidence.getFavorable().compareTo(evidence.getFavorable()) == -1) {
+                            templateEvidence.setFavorable(evidence.getFavorable());
                         }
-                        if (templateEvidenceUnfavorable.getUnfavorable().compareTo(evidence.getUnfavorable())==1){
-                            templateEvidenceUnfavorable = (Evidence) evidence.clone();
-                        }
-                    }
-                }
-                maxMinFavorable.add((Evidence) templateEvidenceFavorable.clone());
-                maxMinUnfavorable.add((Evidence) templateEvidenceUnfavorable.clone());
-            }
-            for(Factor factor : factors){
-                Evidence templateEvidenceFavorable = new Evidence(BigDecimal.valueOf(100), BigDecimal.valueOf(0), factor);
-                Evidence templateEvidenceUnfavorable = new Evidence(BigDecimal.valueOf(100), BigDecimal.valueOf(0), factor);
-                for (Evidence evidence : maxMinFavorable){
-                    if (evidence.getFactor().getId() == factor.getId()){
-                        if (templateEvidenceFavorable.getFavorable().compareTo(evidence.getFavorable())==1){
-                            templateEvidenceFavorable = (Evidence) evidence.clone();
+                        if (templateEvidence.getUnfavorable().compareTo(evidence.getUnfavorable()) == 1) {
+                            templateEvidence.setUnfavorable(evidence.getUnfavorable());
                         }
                     }
                 }
-                for (Evidence evidence : maxMinUnfavorable){
-                    if (evidence.getFactor().getId() == factor.getId()){
-                        if (templateEvidenceUnfavorable.getUnfavorable().compareTo(evidence.getUnfavorable())==-1){
-                            templateEvidenceUnfavorable = (Evidence) evidence.clone();
-                        }
-                    }
-                }
-                finalEvidenceFavorable = (Evidence) templateEvidenceFavorable.clone();
-                finalEvidenceUnfavorable = (Evidence) templateEvidenceUnfavorable.clone();
+                maxMinFavorable.add((Evidence) templateEvidence.clone());
             }
         }
 
-        return evidenceRepository.findByPropositionId(propositionId);
+        for(Factor factor : factors){
+            Evidence templateEvidence = new Evidence(BigDecimal.valueOf(100), BigDecimal.valueOf(0), factor);
+            for (Evidence evidence : maxMinFavorable){
+                if (evidence.getFactor().getId() == factor.getId()){
+                    if (templateEvidence.getFavorable().compareTo(evidence.getFavorable()) == 1){
+                        templateEvidence.setFavorable(evidence.getFavorable());
+                    }
+                    if (templateEvidence.getUnfavorable().compareTo(evidence.getUnfavorable()) == -1){
+                        templateEvidence.setUnfavorable(evidence.getUnfavorable());
+                    }
+                }
+            }
+
+            BigDecimal mi = templateEvidence.getFavorable().subtract(templateEvidence.getUnfavorable());
+            BigDecimal lambda = templateEvidence.getFavorable().add(templateEvidence.getUnfavorable()).subtract(BigDecimal.valueOf(100));
+            templateEvidence.setFavorable(mi);
+            templateEvidence.setUnfavorable(lambda);
+            miLambda.add((Evidence) templateEvidence.clone());
+        }
+
+        return miLambda;
     }
 
 }
