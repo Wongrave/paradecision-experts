@@ -2,14 +2,14 @@
 paradecision:
   database:
     encryption:
-      key: HOENIRTYRMAGNISNOTRAVARFORSETISK
+      key: --
 
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://177.70.27.122:3306/lethani?noAccessToProcedureBodies=true&useSSL=false
-    username: tomiatti
-    password: 4@11linux
+    url: --
+    username: --
+    password: --
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,5 +21,5 @@ spring:
       fail-on-empty-beans: false
 
 jwt:
-  secret: 90399132-7dc4-4751-8bc0-7fa129a904cc
+  secret: --
   expiration: 604800000
